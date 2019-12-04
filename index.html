@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" type="image/x-icon" href="https://static.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+<link rel="mask-icon" type="" href="https://static.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+<title>CodePen - 2002-1</title>
+<style>
+  #mainTitle{
+  font-size:150%;
+  color:#FF0000;
+}
+#firstList{
+  background-image: url("https://www.healthyplace.com/sites/default/files/ShareTasksHaveMoreFun.jpg");
+}
+.myLists{
+  color:yellow;
+}
+
+.odd{
+  background-color:rgba(200,200,200,0.2)
+}
+
+.even{
+  background-color:rgba(100,100,100,0.2)
+}
+</style>
+</head>
+<body translate="no">
+<h2 id="mainTitle">To do list</h2>
+<ul class="myLists" id="firstList">
+<li class="odd">Do math homework</li>
+<li class="even">Check social media</li>
+</ul>
+<button id="addItem">Add</button>
+<input id="theItem">
+<script id="rendered-js">
+      console.clear();
+console.log("hello world");
+
+const addButton = document.getElementById("addItem");
+addButton.addEventListener("click", doClick);
+
+function doClick(e) {
+  const theValue = document.getElementById("theItem").value;
+  console.log(theValue);
+  var node = document.createElement("li");
+  var textnode = document.createTextNode(theValue);
+  node.appendChild(textnode);
+  document.getElementById("firstList").appendChild(node);
+}
+    </script>
+</body>
+</html>
